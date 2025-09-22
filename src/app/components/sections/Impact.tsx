@@ -39,9 +39,9 @@ const Impact = () => {
     },
     {
       icon: <Cpu className="text-red-500" size={32} />,
-      title: "Systems Engineering",
-      description: "Experience with distributed systems, message queuing, and embedded development. Proven track record of modernizing legacy systems and reducing costs by millions.",
-      skills: ["ActiveMQ", "RTOS", "Legacy Migration", "Performance Optimization"]
+      title: "Product Engineering",
+      description: "Leading end-to-end product development from concept to deployment. Building innovative platforms like Sphinque and Rosetta Rx that solve real-world problems at scale.",
+      skills: ["Product Strategy", "MVP Development", "Agile Leadership", "User Research"]
     }
   ]
 

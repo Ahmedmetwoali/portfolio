@@ -3,7 +3,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Linkedin, Github, Send, User, MessageSquare, AlertCircle } from 'lucide-react'
+import { Mail, Linkedin, Github, Send, User, MessageSquare } from 'lucide-react'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 
@@ -27,10 +27,15 @@ const Contact = () => {
 
   // EmailJS integration
   const sendEmailJS = async () => {
-
-    const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!
-    const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!
-    const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+    const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+    const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+    const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    
+    // Check if credentials are configured
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+      console.error('EmailJS credentials not configured. Please check your .env.local file.')
+      return false
+    }
     
     try {
       const response = await emailjs.send(
@@ -303,27 +308,6 @@ ${formData.message}
                   <p className="text-white group-hover:text-red-500 transition-colors">github.com/Ahmedmetwoali</p>
                 </div>
               </a>
-            </div>
-            
-            <div className="p-6 bg-gradient-to-br from-red-500/10 to-transparent border border-red-500/30">
-              <h4 className="text-xl font-bold mb-3">Available for Opportunities</h4>
-              <p className="text-gray-400 text-sm mb-4">
-                Currently seeking senior engineering roles and technical leadership positions.
-                Open to both full-time and contract opportunities.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="text-xs px-3 py-1 bg-zinc-900 text-gray-400 border border-zinc-800">Senior Engineer</span>
-                <span className="text-xs px-3 py-1 bg-zinc-900 text-gray-400 border border-zinc-800">Tech Lead</span>
-                <span className="text-xs px-3 py-1 bg-zinc-900 text-gray-400 border border-zinc-800">Full-Stack</span>
-                <span className="text-xs px-3 py-1 bg-zinc-900 text-gray-400 border border-zinc-800">AI/ML</span>
-                <span className="text-xs px-3 py-1 bg-zinc-900 text-gray-400 border border-zinc-800">Remote</span>
-              </div>
-            </div>
-            
-            {/* Response time */}
-            <div className="text-sm text-gray-500 border-l-2 border-zinc-800 pl-4">
-              <p className="mb-1">💬 Typical response time: 24-48 hours</p>
-              <p>📍 Based in Philadelphia, PA • Open to remote</p>
             </div>
           </motion.div>
         </div>
