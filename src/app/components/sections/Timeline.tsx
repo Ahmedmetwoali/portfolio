@@ -9,7 +9,8 @@ const Timeline = () => {
       title: "Senior Software Engineer",
       company: "Serco",
       achievement: "Modernized government systems serving 200+ sites",
-      tech: ["React", "Spring Boot", "Microservices"]
+      tech: ["React", "Spring Boot", "Microservices"],
+      current: true as boolean | undefined  // Make it optional
     },
     {
       year: "2022",

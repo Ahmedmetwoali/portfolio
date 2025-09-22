@@ -2,24 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom CSS variables */
-:root {
-  --red: rgb(239, 68, 68);
-  --dark: rgb(10, 10, 10);
+@layer base {
+  body {
+    @apply bg-black text-white;
+  }
 }
 
-/* Base styles */
-body {
-  background-color: black;
-  color: white;
-  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Selection */
-::selection {
-  background-color: var(--red);
-  color: white;
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(to right, #ef4444, #dc2626);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
 
 /* Custom scrollbar */
@@ -28,21 +23,21 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: black;
+  background: #000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--red);
+  background: #ef4444;
+  border-radius: 0;
 }
 
-/* Utility classes */
-.text-gradient {
-  background: linear-gradient(to right, rgb(239, 68, 68), rgb(220, 38, 38));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
 }
 
-.glow {
-  box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+/* Selection color */
+::selection {
+  background: #ef4444;
+  color: white;
 }
