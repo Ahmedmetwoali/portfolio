@@ -1,9 +1,9 @@
-import Navigation from '@/app/components/ui/Navigation'
-import Hero from '@/app/components/sections/Hero'
-import Impact from '@/app/components/sections/Impact'
-import Projects from '@/app/components/sections/Projects'
-import Timeline from '@/app/components/sections/Timeline'
-import Contact from '@/app/components/sections/Contact'
+import Navigation from './components/ui/Navigation'
+import Hero from './components/sections/Hero'
+import Impact from './components/sections/Impact'
+import Projects from './components/sections/Projects'
+import Timeline from './components/sections/Timeline'
+import Contact from './components/sections/Contact'
 
 export default function Home() {
   return (

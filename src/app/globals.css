@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-black text-white;
+    @apply bg-black text-white antialiased;
   }
 }
 
@@ -15,6 +15,10 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  
+  .glow {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+  }
 }
 
 /* Custom scrollbar */
@@ -23,12 +27,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #ef4444;
   border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
 }
 
 /* Smooth scroll */
@@ -40,4 +48,49 @@ html {
 ::selection {
   background: #ef4444;
   color: white;
+}
+
+::-moz-selection {
+  background: #ef4444;
+  color: white;
+}
+
+/* Remove default focus outlines and add custom ones */
+*:focus {
+  outline: none;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #ef4444;
+  outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
