@@ -119,12 +119,6 @@ ${formData.message}
           >
             <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
             
-            {/* Info banner */}
-            <div className="bg-zinc-900 border border-zinc-800 p-4 mb-6 text-sm text-gray-400">
-              <AlertCircle className="inline mr-2 text-yellow-500" size={16} />
-              This form uses secure email delivery. No data is stored.
-            </div>
-            
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
