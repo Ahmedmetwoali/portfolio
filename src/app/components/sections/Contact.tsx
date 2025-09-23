@@ -109,8 +109,7 @@ ${formData.message}
             Get In Touch
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Have a project in mind or looking for a senior engineer? 
-            I&apos;m available for full-time roles and consulting opportunities.
+           Have ideas, opportunities, or just want to chat? Let&apos;s talk.
           </p>
         </motion.div>
 
