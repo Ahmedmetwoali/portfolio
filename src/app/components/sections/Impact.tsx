@@ -46,7 +46,7 @@ const Impact = () => {
   ]
 
   return (
-    <section id="expertise" className="py-32 px-6 bg-zinc-950">
+    <section id="about" className="py-32 px-6 bg-zinc-950">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
