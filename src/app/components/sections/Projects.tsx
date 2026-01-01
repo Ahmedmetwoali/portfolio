@@ -1,41 +1,44 @@
+// app/components/sections/Projects.tsx
+
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, Globe, Sparkles, Building, Database, Heart, Shield } from 'lucide-react'
+import { ExternalLink, Sparkles, Building, Database, Shield } from 'lucide-react'
 
 const projects = [
   {
     id: 1,
     title: 'Sphinque',
-    category: 'AI PLATFORM - LEAD DEVELOPER',
-    description: 'AI-powered talent intelligence platform revolutionizing tech hiring. Built multi-agent AI systems for code analysis, reducing hiring timelines by 90% while maintaining quality through 5% acceptance rate.',
-    tech: ['Django', 'React', 'PostgreSQL', 'Google Gemini', 'Redis', 'Docker'],
+    category: 'AI-POWERED TALENT INTELLIGENCE & VETTING PLATFORM',
+    role: 'Founder & Lead Engineer',
+    period: 'Jan 2025 – Present',
+    description: 'Full-stack AI-powered talent verification platform using Django REST, React, and PostgreSQL. Integrated Google Gemini 2.0 and LangGraph for multi-agent AI code analysis. Designed event-driven pipeline with GitHub OAuth, webhook-based PR detection, and Celery/Redis for real-time candidate evaluations.',
+    highlights: [
+      'Engineered real-time voice interview system using OpenAI Realtime API to verify candidate knowledge',
+      'Deployed 5-service microservices architecture on Railway with Docker and GitHub Actions CI/CD'
+    ],
+    tech: ['Django REST', 'React', 'PostgreSQL', 'Google Gemini 2.0', 'LangGraph', 'Celery', 'Redis', 'Docker'],
     link: 'https://sphinque.com',
     icon: <Sparkles className="w-8 h-8" />,
-    metrics: ['90% faster hiring', '5% acceptance rate', 'Multi-agent AI'],
+    metrics: ['Multi-agent AI', 'Real-time voice interviews', '5-service architecture'],
     type: 'personal'
   },
   {
     id: 2,
     title: 'Rosetta Rx',
-    category: 'HEALTHCARE TECH - LEAD DEVELOPER',
-    description: 'Medical asset logistics platform for humanitarian organizations. Reduced processing time by 80% using Computer Vision and NLP for medication management in underserved regions.',
-    tech: ['Next.js', 'TypeScript', 'Google Cloud', 'Terraform', 'Vision API', 'Firebase'],
+    category: 'AI/ML PLATFORM FOR MEDICAL ASSET LOGISTICS & DATA FUSION',
+    role: 'Contract Software Engineer | Medonations NGO',
+    period: 'Jun 2025 – Nov 2025',
+    description: 'Architected serverless ML pipeline on GCP using Vision API and NLP to process medication labels across 50+ languages. Integrated FDA/RxNorm databases for drug validation and delivered HIPAA-compliant infrastructure using Terraform.',
+    highlights: [
+      'Computer Vision and NLP for medication label processing across 50+ languages',
+      'HIPAA-compliant infrastructure with FDA/RxNorm database integration'
+    ],
+    tech: ['Next.js', 'TypeScript', 'Google Cloud', 'Terraform', 'Vision API', 'NLP', 'Firebase'],
     link: 'https://rosettarx.org',
     icon: <Database className="w-8 h-8" />,
-    metrics: ['80% time reduction', 'CV/NLP integration', 'Global deployment'],
-    type: 'personal'
-  },
-  {
-    id: 3,
-    title: 'CareConnect Platform',
-    category: 'FREELANCE PROJECT',
-    description: 'Healthcare staffing solution connecting certified caregivers with homecare agencies. Built end-to-end platform with real-time shift management, secure authentication, and automated matching algorithm for 50+ beta users.',
-    tech: ['Python', 'Flask', 'Firebase', 'JavaScript', 'Tailwind CSS', 'Google Auth'],
-    link: null,
-    icon: <Heart className="w-8 h-8" />,
-    metrics: ['3 agency partners', '50+ caregivers', 'Automated matching'],
-    type: 'freelance'
+    metrics: ['50+ languages', 'HIPAA-compliant', 'Serverless ML pipeline'],
+    type: 'contract'
   }
 ]
 
@@ -45,21 +48,33 @@ const workProjects = [
     company: 'Serco',
     title: 'CEDF Redesign',
     category: 'GOVERNMENT DATA EXCHANGE PLATFORM',
-    description: 'Led modernization of critical government data exchange platform serving 200+ national sites. Built new React frontend from scratch, achieving 40% reduction in processing times and implementing 15+ new features.',
+    period: 'Oct 2024 – Sep 2025',
+    description: 'Led team in time-sensitive modernization of CEDF Redesign application, a custom tool designed to transfer data between government trading partners. Built new frontend from scratch using React, Bootstrap, and Axios, delivering intuitive UI for data and job management.',
+    highlights: [
+      'Reduced data processing times by 40% across 200+ national sites',
+      'Implemented 15+ new features increasing user operational efficiency by 25%',
+      'Replaced legacy application, resolving significant technical debt'
+    ],
     tech: ['React', 'Bootstrap', 'Axios', 'REST APIs', 'Microservices'],
     icon: <Building className="w-8 h-8" />,
-    metrics: ['200+ sites', '40% faster', '$200M+ data processed'],
+    metrics: ['200+ sites', '40% faster processing', '15+ new features'],
     clearance: true
   },
   {
     id: 2,
     company: 'Lockheed Martin',
     title: 'SCM DX',
-    category: 'SUPPLY CHAIN SYSTEM',
-    description: 'Architected backend API development for enterprise supply chain management system, replacing licensed IBM software to achieve $5M annual savings. Modernized legacy Java systems for improved performance and maintainability.',
+    category: 'ENTERPRISE SUPPLY CHAIN PLATFORM',
+    period: 'Nov 2022 – Oct 2024',
+    description: 'Built backend APIs using Java and Spring Boot for enterprise supply chain platform, replacing licensed vendor system with in-house solution that reduced operational costs. Led refactoring of legacy codebase and optimized SQL queries.',
+    highlights: [
+      'Replaced licensed IBM software reducing operational costs',
+      'Improved system performance across multiple production environments',
+      'Managed code reviews and production deployments'
+    ],
     tech: ['Java', 'Spring Boot', 'AWS', 'Oracle', 'ActiveMQ'],
     icon: <Shield className="w-8 h-8" />,
-    metrics: ['$5M saved', '4 national sites', 'Secret clearance'],
+    metrics: ['Cost reduction', 'Multiple prod environments', 'Secret clearance'],
     clearance: true
   }
 ]
@@ -75,10 +90,10 @@ const Projects = () => {
         >
           <p className="text-red-500 uppercase tracking-widest mb-4">02</p>
           <h2 className="text-5xl md:text-7xl font-black mb-4">Featured Work</h2>
-          <p className="text-gray-400 text-lg mb-16">Personal projects and freelance work showcasing innovation and technical expertise</p>
+          <p className="text-gray-400 text-lg mb-16">Personal ventures and contract work showcasing AI/ML expertise</p>
         </motion.div>
         
-        {/* Personal & Freelance Projects */}
+        {/* Personal & Contract Projects */}
         <div className="grid gap-8 mb-20">
           {projects.map((project, index) => (
             <motion.div
@@ -94,12 +109,22 @@ const Projects = () => {
                   <div className="flex items-start justify-between mb-6">
                     <div>
                       <p className="text-red-500 text-sm font-mono mb-2">{project.category}</p>
-                      <h3 className="text-3xl md:text-4xl font-bold mb-4">{project.title}</h3>
+                      <h3 className="text-3xl md:text-4xl font-bold mb-2">{project.title}</h3>
+                      <p className="text-gray-500 text-sm">{project.role} • {project.period}</p>
                     </div>
                     <div className="text-red-500">{project.icon}</div>
                   </div>
                   
-                  <p className="text-gray-400 text-lg mb-6">{project.description}</p>
+                  <p className="text-gray-400 text-lg mb-4">{project.description}</p>
+                  
+                  <ul className="text-gray-500 mb-6 space-y-2">
+                    {project.highlights.map((highlight, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-red-500 mt-1">•</span>
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
                   
                   <div className="flex flex-wrap gap-4 mb-6">
                     {project.metrics.map((metric) => (
@@ -126,9 +151,6 @@ const Projects = () => {
                     >
                       View Project <ExternalLink size={16} />
                     </a>
-                  )}
-                  {project.type === 'freelance' && !project.link && (
-                    <span className="text-gray-500 text-sm">Client project - Details under NDA</span>
                   )}
                 </div>
               </div>
@@ -162,20 +184,37 @@ const Projects = () => {
                   <p className="text-xs text-red-500 uppercase tracking-wider mb-1">{project.company}</p>
                   <h4 className="text-2xl font-bold">{project.title}</h4>
                   <p className="text-sm text-gray-500">{project.category}</p>
+                  <p className="text-xs text-gray-600 mt-1">{project.period}</p>
                 </div>
                 <div className="text-gray-600">{project.icon}</div>
               </div>
               
               <p className="text-gray-400 mb-4">{project.description}</p>
               
-              <div className="flex flex-wrap gap-3 mb-4">
+              <ul className="text-gray-500 text-sm mb-4 space-y-1">
+                {project.highlights.map((highlight, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-red-500/70">•</span>
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.tech.map((tech) => (
+                  <span key={tech} className="px-2 py-1 bg-zinc-950 border border-zinc-800 text-xs">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              
+              <div className="flex flex-wrap gap-3">
                 {project.metrics.map((metric) => (
                   <span key={metric} className="text-xs text-gray-500">
                     • {metric}
                   </span>
                 ))}
               </div>
-            
             </motion.div>
           ))}
         </div>

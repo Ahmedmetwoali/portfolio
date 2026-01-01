@@ -8,11 +8,11 @@ const Timeline = () => {
   const career = [
     {
       startDate: "Oct 2024",
-      endDate: "Present",
+      endDate: "Sep 2025",
       title: "Senior Software Engineer",
       company: "Serco",
-      achievement: "Modernized government systems serving 200+ sites",
-      tech: ["React", "Spring Boot", "Microservices"],
+      achievement: "Led modernization of CEDF platform serving 200+ national sites, reducing processing times by 40%",
+      tech: ["React", "Spring Boot", "Microservices", "REST APIs"],
       current: true
     },
     {
@@ -20,16 +20,16 @@ const Timeline = () => {
       endDate: "Oct 2024",
       title: "Software Engineer",
       company: "Lockheed Martin",
-      achievement: "Saved $5M through system optimization",
-      tech: ["Java", "AWS", "System Architecture"]
+      achievement: "Built backend APIs replacing licensed vendor system, reducing operational costs",
+      tech: ["Java", "Spring Boot", "AWS", "Oracle"]
     },
     {
       startDate: "Feb 2022",
       endDate: "Nov 2022",
       title: "Software Engineer",
       company: "Raytheon Technologies",
-      achievement: "Improved data handling by 30%",
-      tech: ["Message Queuing", "Cloud Migration"]
+      achievement: "Designed message queuing system improving data handling by 30%",
+      tech: ["ActiveMQ", "Java", "AWS", "Azure"]
     },
     {
       startDate: "Aug 2017",

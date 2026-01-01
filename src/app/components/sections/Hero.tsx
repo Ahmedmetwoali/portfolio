@@ -56,7 +56,7 @@ const Hero = () => {
               <div className="text-gray-300 grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
                 <span>ai_platform_sphinque.py</span>
                 <span>medical_tech_rosetta.js</span>
-                <span>cost_savings_5m.json</span>
+                <span>cedf_modernization.java</span>
                 <span>sites_served_200.db</span>
               </div>
             </div>
@@ -72,8 +72,8 @@ const Hero = () => {
             AHMED <span className="text-red-500">METWOALI</span>
           </h1>
           <p className="text-base sm:text-xl text-gray-400 mb-6 sm:mb-8 max-w-2xl">
-            Building AI-powered platforms that transform industries. From reducing hiring time by 90% 
-            with Sphinque to revolutionizing medical logistics with Rosetta Rx.
+            Full-stack engineer with 5+ years building scalable, production-grade applications. 
+            Currently focused on AI/ML systems — developing multiagent platforms using LangGraph, RAG, and LLM APIs.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">

@@ -10,38 +10,38 @@ const Impact = () => {
     {
       icon: <Brain className="text-red-500" size={32} />,
       title: "AI/ML Engineering",
-      description: "Building advanced AI systems with multi-agent architectures, RAG implementations, and production-grade ML pipelines using Google Gemini, OpenAI, and LangGraph.",
-      skills: ["LLM Integration", "Computer Vision", "NLP", "Multi-Agent Systems"]
+      description: "Developing multiagent platforms using LangGraph, RAG, and LLM APIs. Building production AI systems with Google Gemini, OpenAI, and Computer Vision for real-world applications.",
+      skills: ["LangGraph", "RAG", "OpenAI API", "Google Gemini", "Pinecone", "NLP"]
     },
     {
       icon: <Code2 className="text-red-500" size={32} />,
       title: "Full-Stack Development",
-      description: "Developing mission-critical applications with modern frameworks. Expert in React, Next.js, Django, and Spring Boot for scalable enterprise solutions.",
-      skills: ["React/Next.js", "Django/Flask", "Spring Boot", "TypeScript"]
+      description: "Building scalable, production-grade applications with modern frameworks. Expert in React, Next.js, Django, and Spring Boot for enterprise and startup solutions.",
+      skills: ["React", "Next.js", "Django", "Spring Boot", "TypeScript", "Flask"]
     },
     {
       icon: <Database className="text-red-500" size={32} />,
       title: "Backend Architecture",
-      description: "Designing robust microservices and APIs serving 200+ sites. Specializing in high-performance systems with Java, Python, and modern database technologies.",
-      skills: ["Microservices", "REST/SOAP APIs", "PostgreSQL", "System Design"]
+      description: "Designing robust APIs and microservices for enterprise systems. Specializing in Java, Python, and modern database technologies including PostgreSQL and Oracle.",
+      skills: ["Java", "Python", "PostgreSQL", "Oracle", "REST APIs", "Microservices"]
     },
     {
       icon: <Cloud className="text-red-500" size={32} />,
       title: "Cloud & DevOps",
-      description: "Implementing secure cloud infrastructure on AWS and GCP with IaC. Building CI/CD pipelines and containerized deployments for government-grade systems.",
-      skills: ["AWS/GCP", "Docker/Kubernetes", "Terraform", "CI/CD"]
+      description: "Implementing cloud infrastructure on AWS and GCP with Infrastructure as Code. Building CI/CD pipelines and containerized deployments for production systems.",
+      skills: ["AWS", "GCP", "Docker", "Terraform", "GitHub Actions", "CI/CD"]
     },
     {
       icon: <Lock className="text-red-500" size={32} />,
       title: "Security & Compliance",
-      description: "Maintaining DoD Secret clearance with expertise in secure system design, cryptography, and compliance frameworks for government contractors.",
-      skills: ["Security Clearance", "FISMA/FedRAMP", "Zero Trust", "Encryption"]
+      description: "Maintaining Active DoD Secret clearance with expertise in secure system design and compliance frameworks. Building HIPAA-compliant infrastructure for healthcare applications.",
+      skills: ["DoD Secret Clearance", "HIPAA Compliance", "Secure Architecture", "FDA Integration"]
     },
     {
       icon: <Cpu className="text-red-500" size={32} />,
-      title: "Product Engineering",
-      description: "Leading end-to-end product development from concept to deployment. Building innovative platforms like Sphinque and Rosetta Rx that solve real-world problems at scale.",
-      skills: ["Product Strategy", "MVP Development", "Agile Leadership", "User Research"]
+      title: "Languages & Tools",
+      description: "Proficient across multiple programming languages and frameworks. From system-level development to modern web applications and mobile platforms.",
+      skills: ["Java", "Python", "JavaScript", "C#", "SQL", "React Native"]
     }
   ]
 
@@ -57,8 +57,8 @@ const Impact = () => {
           <p className="text-red-500 uppercase tracking-widest mb-4">01</p>
           <h2 className="text-5xl md:text-7xl font-black mb-4">What I Do</h2>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-            Senior Software Engineer with expertise in AI/ML, cloud architecture, and full-stack development. 
-            Building mission-critical systems for government and enterprise clients.
+            Full-stack engineer with 5+ years building scalable, production-grade applications. 
+            Currently focused on AI/ML systems — developing multiagent platforms using LangGraph, RAG, and LLM APIs.
           </p>
         </motion.div>
 

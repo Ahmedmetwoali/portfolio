@@ -9,10 +9,10 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Ahmed Metwoali - Senior Software Engineer',
-  description: 'Building AI-powered platforms that transform industries. Creator of Sphinque and Rosetta Rx.',
+  description: 'Full-stack engineer with 5+ years building scalable, production-grade applications. Currently focused on AI/ML systems — developing multiagent platforms using LangGraph, RAG, and LLM APIs.',
   openGraph: {
     title: 'Ahmed Metwoali - Senior Software Engineer',
-    description: 'Building AI-powered platforms that transform industries. Creator of Sphinque and Rosetta Rx.',
+    description: 'Full-stack engineer with 5+ years building scalable, production-grade applications. Creator of Sphinque and Rosetta Rx.',
     images: ['/og.png'],
   },
   viewport: {
