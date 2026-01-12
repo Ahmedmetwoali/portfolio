@@ -11,10 +11,11 @@ const projects = [
     title: 'Sphinque',
     category: 'AI-POWERED TALENT INTELLIGENCE & VETTING PLATFORM',
     role: 'Founder & Lead Engineer',
-    period: 'Jan 2025 – Present',
-    description: 'Full-stack AI-powered talent verification platform using Django REST, React, and PostgreSQL. Integrated Google Gemini 2.0 and LangGraph for multi-agent AI code analysis. Designed event-driven pipeline with GitHub OAuth, webhook-based PR detection, and Celery/Redis for real-time candidate evaluations.',
+    period: 'June 2025 – Present',
+    description: 'Full-stack AI evaluation platform using Django REST, React, and PostgreSQL. Integrated Google Gemini 2.0 and LangGraph for multi-agent code analysis with 90%+ accuracy. Designed event-driven pipeline with GitHub OAuth, webhook-based PR detection, and Celery/Redis processing 1000s of evaluations asynchronously.',
     highlights: [
-      'Engineered real-time voice interview system using OpenAI Realtime API to verify candidate knowledge',
+      'Built multi-agent investigation system using Think-Act-Observe-Evaluate loop with tool registry',
+      'Engineered real-time voice interview system using OpenAI Realtime API for adaptive technical conversations',
       'Deployed 5-service microservices architecture on Railway with Docker and GitHub Actions CI/CD'
     ],
     tech: ['Django REST', 'React', 'PostgreSQL', 'Google Gemini 2.0', 'LangGraph', 'Celery', 'Redis', 'Docker'],
@@ -26,18 +27,19 @@ const projects = [
   {
     id: 2,
     title: 'Rosetta Rx',
-    category: 'AI/ML PLATFORM FOR MEDICAL ASSET LOGISTICS & DATA FUSION',
+    category: 'HUMANITARIAN MEDICATION DONATION PLATFORM',
     role: 'Contract Software Engineer | Medonations NGO',
-    period: 'Jun 2025 – Nov 2025',
-    description: 'Architected serverless ML pipeline on GCP using Vision API and NLP to process medication labels across 50+ languages. Integrated FDA/RxNorm databases for drug validation and delivered HIPAA-compliant infrastructure using Terraform.',
+    period: 'Sept 2025 – Dec 2025',
+    description: 'Architected and built a full-stack humanitarian platform for processing medication donations. Achieved 90-98% extraction accuracy using GPT-4 Vision compared to 70-75% with traditional OCR. Designed multi-photo batch processing architecture sending up to 4 images per API call, reducing costs 50% while improving accuracy.',
     highlights: [
-      'Computer Vision and NLP for medication label processing across 50+ languages',
-      'HIPAA-compliant infrastructure with FDA/RxNorm database integration'
+      '90-98% extraction accuracy with GPT-4 Vision vs 70-75% with traditional OCR',
+      'Built serverless GCP infrastructure (Cloud Functions, Firestore, GCS, Eventarc) with Terraform IaC managing 12 APIs',
+      'Implemented offline-resilient React frontend with IndexedDB persistence for low-connectivity environments'
     ],
-    tech: ['Next.js', 'TypeScript', 'Google Cloud', 'Terraform', 'Vision API', 'NLP', 'Firebase'],
+    tech: ['React', 'GCP Cloud Functions', 'Firestore', 'GPT-4 Vision', 'Terraform', 'Eventarc', 'IndexedDB'],
     link: 'https://rosettarx.org',
     icon: <Database className="w-8 h-8" />,
-    metrics: ['50+ languages', 'HIPAA-compliant', 'Serverless ML pipeline'],
+    metrics: ['90-98% accuracy', '50% cost reduction', '12 APIs managed'],
     type: 'contract'
   }
 ]
@@ -48,7 +50,7 @@ const workProjects = [
     company: 'Serco',
     title: 'CEDF Redesign',
     category: 'GOVERNMENT DATA EXCHANGE PLATFORM',
-    period: 'Oct 2024 – Sep 2025',
+    period: 'Oct 2024 – Sept 2025',
     description: 'Led team in time-sensitive modernization of CEDF Redesign application, a custom tool designed to transfer data between government trading partners. Built new frontend from scratch using React, Bootstrap, and Axios, delivering intuitive UI for data and job management.',
     highlights: [
       'Reduced data processing times by 40% across 200+ national sites',

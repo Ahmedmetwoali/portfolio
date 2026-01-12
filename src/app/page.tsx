@@ -17,7 +17,7 @@ export default function Home() {
         <Contact />
       </main>
       <footer className="py-8 text-center text-gray-500 border-t border-zinc-900">
-        <p>© 2025 Ahmed Metwoali. All rights reserved.</p>
+        <p>© 2026 Ahmed Metwoali. All rights reserved.</p>
       </footer>
     </>
   )
