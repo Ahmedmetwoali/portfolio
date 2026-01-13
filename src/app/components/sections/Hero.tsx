@@ -27,6 +27,26 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 overflow-x-hidden">
       <div className="max-w-7xl w-full mx-auto">
+        
+        {/* Mobile: Centered hero photo at top */}
+        <div className="lg:hidden flex justify-center mb-8">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Image
+              src="/ahmed-hero.png"
+              alt="Ahmed Metwoali"
+              width={250}
+              height={250}
+              className="object-contain w-[200px] h-[200px] sm:w-[250px] sm:h-[250px]"
+              priority
+              quality={85}
+            />
+          </motion.div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Terminal and Text */}
           <div>
@@ -37,7 +57,7 @@ const Hero = () => {
               className="mb-8 sm:mb-12"
             >
               {/* Terminal Window */}
-              <div className="bg-zinc-950 border border-zinc-800 rounded-lg overflow-hidden max-w-3xl">
+              <div className="bg-zinc-950 border border-zinc-800 rounded-lg overflow-hidden w-full">
                 <div className="bg-zinc-900 px-4 py-2 flex items-center gap-2 border-b border-zinc-800">
                   <div className="flex gap-2">
                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -97,20 +117,21 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Right side - Canva design */}
+          {/* Right side - Desktop only large photo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex items-center justify-center order-first lg:order-last"
+            className="hidden lg:flex items-center justify-end lg:left-10 relative"
           >
             <Image
               src="/ahmed-hero.png"
               alt="Ahmed Metwoali"
               width={700}
-              height={600}
+              height={700}
               className="object-contain"
               priority
+              quality={85}
             />
           </motion.div>
         </div>
